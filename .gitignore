@@ -1,7 +1,9 @@
 ### IntelliJ IDEA ###
+.idea
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+an_java_hw6.iml
 
 ### Eclipse ###
 .apt_generated
