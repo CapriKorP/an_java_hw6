@@ -1,19 +1,20 @@
 
 public class Book {
     public String title;
-    // public String author;
+    ;
     public int releaseYear;
+    Author author;
 
     public int pages;
 
 
-    public Book(String title, int releaseYear, int pages) {
+    public Book(String title, int releaseYear,Author author ,int pages) {
         this.title = title;
         this.releaseYear = releaseYear;
+        this.author = author;
         this.pages = pages;
     }
 
-    Author author = new Author("Ivan", "Ivanov", 100);
 
     public boolean isBig() {
         if (pages >= 500) {
@@ -24,9 +25,7 @@ public class Book {
     }
 
     public boolean matches(String word) {
-        if (word.contains(title)) {
-            return true;
-        } else if (word.contains(author.name) || word.contains(author.surname)){
+        if (word.contains(title) || word.contains(author.name) || word.contains(author.surname)){
             return true;
         } else {
             return false;
